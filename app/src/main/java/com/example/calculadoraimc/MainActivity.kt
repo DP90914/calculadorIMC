@@ -23,6 +23,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
@@ -45,6 +46,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -141,6 +143,7 @@ fun Greeting(modifier: Modifier = Modifier) {
                             unfocusedContainerColor = Color.White,
                             focusedContainerColor = Color.White,
                         ),
+                        keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Decimal),
                         label = {
                             Text("Peso")
                         }
@@ -153,7 +156,7 @@ fun Greeting(modifier: Modifier = Modifier) {
                             unfocusedContainerColor = Color.White,
                             focusedContainerColor = Color.White,
                         ),
-
+                        keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Decimal),
                         value = valorAltura,
                         onValueChange = {
                                 novoValor ->
